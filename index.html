@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>filterable responsive lightbox gallery tutorial</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+
+<div class="gallery">
+  <div class="logo colourchange">
+    <h1>piyush logo design</h1>
+  </div>
+    <ul class="controls">
+        <li class="buttons active" data-filter="all">all</li>
+        <li class="buttons" data-filter="ice-cream">logo design</li>
+        <li class="buttons" data-filter="chocolate">chocolate</li>
+        <li class="buttons" data-filter="cake">cake</li>
+        <li class="buttons" data-filter="juice">juice</li>
+        <li class="buttons" data-filter="sandwich">sandwich</li>
+    </ul>
+
+    <div class="image-container">
+
+        <a href="/IMG-20220430-WA0001.jpg" class="image ice-cream">
+            <img src="/IMG-20220430-WA0001.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0002.jpg" class="image ice-cream">
+            <img src="/IMG-20220430-WA0002.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0003.jpg" class="image ice-cream">
+            <img src="/IMG-20220430-WA0003.jpg" alt="">
+        </a>
+
+        <a href="/IMG-20220430-WA0004(2).jpg" class="image chocolate">
+            <img src="/IMG-20220430-WA0004(2).jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0005.jpg" class="image chocolate">
+            <img src="/IMG-20220430-WA0005.jpg" alt="">
+        </a>
+
+        <a href="/IMG-20220430-WA0006.jpg" class="image cake">
+            <img src="/IMG-20220430-WA0006.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0007.jpg" class="image cake">
+            <img src="/IMG-20220430-WA0007.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0008.jpg" class="image cake">
+            <img src="/IMG-20220430-WA0008.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0009.jpg" class="image cake">
+            <img src="/IMG-20220430-WA0009.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0011.jpg" class="image cake">
+            <img src="/IMG-20220430-WA0011.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0012.jpg" class="image juice">
+            <img src="/IMG-20220430-WA0012.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0013.jpg" class="image juice">
+            <img src="/IMG-20220430-WA0013.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0014.jpg" class="image juice">
+            <img src="/IMG-20220430-WA0014.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0015.jpg" class="image sandwich">
+            <img src="/IMG-20220430-WA0015.jpg" alt="">
+        </a>
+        
+        <a href="/IMG-20220430-WA0016.jpg" class="image sandwich">
+          <img src="/IMG-20220430-WA0016.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0017.jpg" class="image sandwich">
+            <img src="/IMG-20220430-WA0017.jpg" alt="">
+        </a>
+        <a href="/IMG-20220430-WA0018.jpg" class="image sandwich">
+            <img src="/IMG-20220430-WA0018.jpg" alt="">
+        </a>
+
+    </div>
+
+</div>
+
+
+<!-- jquery cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- magnific popup js cdn link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+<script>
+
+$(document).ready(function(){
+
+    $('.buttons').click(function(){
+
+        $(this).addClass('active').siblings().removeClass('active');
+
+        var filter = $(this).attr('data-filter')
+
+        if(filter == 'all'){
+            $('.image').show(400);
+        }else{
+            $('.image').not('.'+filter).hide(200);
+            $('.image').filter('.'+filter).show(400);
+        }
+
+    });
+
+    $('.gallery').magnificPopup({
+
+        delegate:'a',
+        type:'image',
+        gallery:{
+            enabled:true
+        }
+
+    });
+
+});
+
+</script>
+    
+</body>
+</html>
