@@ -35,7 +35,7 @@
 }
 
 .gallery .controls .buttons.active{
-    background:coral;
+    background:rgb(144, 8, 255);
     color:#fff;
 }
 
@@ -83,6 +83,6 @@
   }
   
   100%{
-    color: red;
+    color: rgb(68, 0, 255);
   }
 }
