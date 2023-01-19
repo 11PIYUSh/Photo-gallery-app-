@@ -8,7 +8,7 @@
 
 .gallery{
     min-height: 100vh;
-    background:#eee;
+    background:rgb(0, 0, 0);
     padding-bottom: 100px;
 }
 
@@ -24,7 +24,7 @@
 .gallery .controls .buttons{
     height:40px;
     width: 140px;
-    background:#fff;
+    background:white;
     color:#666;
     font-size: 20px;
     line-height: 40px;
@@ -50,7 +50,7 @@
     height:250px;
     width: 350px;
     overflow: hidden;
-    border:15px solid #fff;
+    border:15px solid rgb(144, 8, 255);
     box-shadow: 0 3px 5px rgba(0,0,0,.3);
     margin: 20px;
 }
@@ -67,9 +67,9 @@
 
 .logo{
  text-align: center;
- font-weight: bold;
+ font-weight: bolder;
  color: red;
- border: solid white 2px;
+ border: solid wrgb(144, 8, 255)hite 2px;
  
  
 }
@@ -79,10 +79,10 @@
 }
 @keyframes colorchange{
   0%{
-    color: #000;
+    color: rgb(255, 18, 18);
   }
   
   100%{
-    color: rgb(68, 0, 255);
+    color: rgb(255, 0, 255);
   }
 }
